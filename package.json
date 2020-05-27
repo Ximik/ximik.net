@@ -1,0 +1,26 @@
+{
+  "name": "ximik.net",
+  "private": true,
+  "author": "Alex Tsokurov",
+  "license": "MIT",
+  "scripts": {
+    "serve": "serve site",
+    "pages": "node pages",
+    "styles": "node styles"
+  },
+  "type": "module",
+  "dependencies": {
+    "cssnano": "^4.1.10",
+    "glob": "^7.1.6",
+    "highlight.js": "^10.0.2",
+    "normalize.css": "^8.0.1",
+    "postcss": "^7.0.29",
+    "postcss-import": "^12.0.1",
+    "tex2svg": "^1.0.2",
+    "yaml": "^1.9.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5",
+    "serve": "^11.3.0"
+  }
+}

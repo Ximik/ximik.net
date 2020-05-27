@@ -1,0 +1,10 @@
+@import "highlight.js/styles/default.css";
+
+code.hljs {
+  display: inline;
+  padding: 0;
+}
+
+code {
+  font-size: 0.8em;
+}
