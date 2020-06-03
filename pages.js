@@ -10,6 +10,7 @@ async function buildPages() {
   const headers = [];
   for (const filepath of filepaths) {
     const { header, body } = await markdown("pages/" + filepath);
+    console.log(header);
     const path = filepath.slice(0, -3);
     await fs.mkdir(OUT_DIR + "/" + path, { recursive: true });
     await fs.writeFile(
@@ -33,12 +34,7 @@ async function buildPages() {
 buildPages().then((headers) =>
   fs.writeFile(
     OUT_DIR + "/index.html",
-    layout(
-      headers
-        .map(
-          ({ title, description, path }) =>
-            `<article class="index"><header><a href="${path}">${title}</a></header>${description}</article>`
-        )
+    layout(headers.map( ({ title, description, path }) => `<article class="index"><header><a href="${path}">${title}</a></header>${description}</article>`)
         .join(""),
       { title: "Home" }
     )
